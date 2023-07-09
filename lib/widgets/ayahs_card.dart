@@ -16,24 +16,12 @@ class _AyahsCardState extends State<AyahsCard> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.pop(
-          context,
-          MaterialPageRoute(builder: (context) => const HomeScrean()),
-        );
-      },
-      child: const Column(
-        children: [
-          SizedBox(
-            height: 5,
-          ),
-          Card(
-            child: ListTile(
-              title: Text(widget.quranModel.name),
-            ),
-          )
-        ],
-      ),
-    );
+        onTap: () {
+          Navigator.pop(
+            context,
+            MaterialPageRoute(builder: (context) => const HomeScrean()),
+          );
+        },
+        child: Text("widget.quranModel.number"));
   }
 }

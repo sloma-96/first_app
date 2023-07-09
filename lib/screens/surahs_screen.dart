@@ -28,28 +28,18 @@ class _SurahsScreenState extends State<SurahsScreen> {
   Widget build(BuildContext context) {
     return Consumer<SurahProvider>(builder: (context, surProvider, child) {
       return Scaffold(
-          backgroundColor: Colors.white,
-          appBar: AppBar(
-            centerTitle: true,
-            title: Text(
-              AppLocalizations.of(context)!.quranapp,
-              style: const TextStyle(color: Color.fromARGB(255, 3, 128, 44)),
-            ),
-            backgroundColor: Colors.white,
-            iconTheme: IconThemeData(color: Colors.black38),
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            AppLocalizations.of(context)!.quranapp,
+            style: const TextStyle(color: Color.fromARGB(255, 3, 128, 44)),
           ),
-          body: Card(
-            child: SizedBox(
-              child: ListView.builder(
-                itemBuilder: (context, index) {
-                  return AyahsCard(
-                    quranModel: surProvider.quran[index],
-                  );
-                },
-                itemCount: surProvider.quran.length,
-              ),
-            ),
-          ));
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black38),
+        ),
+        body: Center(child: Text(widget.number)),
+      );
     });
   }
 }
